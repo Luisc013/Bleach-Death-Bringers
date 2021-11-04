@@ -12,6 +12,7 @@
     height: 100vh;
     width: 100vw;
     background-color: #000000;
+    cursor: none;
   }
   
 * {
@@ -23,11 +24,13 @@
 
   #intro-container {
     outline: none;
+    z-index: 1;
   }
   
 .showcase {
       width: 100%;
       min-height: 100vh;
+      min-width: 100vw;
   }
 
 .showcase video {
@@ -88,7 +91,6 @@
     color: #ED1C22;
     font-size: 2.5em;
     border: #fff;
-    text-decoration: underline;
   }
 
   .spacebar-icon {

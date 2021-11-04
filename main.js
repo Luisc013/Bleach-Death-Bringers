@@ -1,7 +1,7 @@
 const introcontainer = document.querySelector('#intro-container');
 const titlemusic = document.querySelector('#title-music');
 var delayInMilliseconds = 2000;
-var delayInMilliseconds2 = 9000;
+var delayInMilliseconds2 = 10000;
 var titlecounter = 0;
 
 setTimeout(function() {
@@ -27,7 +27,7 @@ setTimeout(function() {
             } else{
                 idToHide.style.opacity = parseFloat(idToHide.style.opacity) + 0.05;
             }
-        },250);
+        },100);
         }
 
 function startShowing(){
@@ -38,9 +38,9 @@ function startShowing(){
         {
             clearInterval(intervalId);
         }else{
-            elementToHide.style.opacity = parseFloat(elementToHide.style.opacity) + 0.03;
+            elementToHide.style.opacity = parseFloat(elementToHide.style.opacity) + 0.02;
         }
-    },250);
+    },100);
     }
 
     

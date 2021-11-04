@@ -15,15 +15,6 @@ image.onload = function() {
   let canvas = document.getElementById("myCanvas");
   let context = canvas.getContext("2d");
   window.requestAnimationFrame(animate);
-
-  function myFunction() {
-    context.clearRect(0,0,canvas.width, canvas.height)
-    let frame = Math.floor(counter % 1);
-    context.drawImage(image, frame * frame_width, 0, frame_width, frame_height, 0, 0, frame_width, frame_height);
-    counter = counter + .14;
-    
-    window.requestAnimationFrame(animate);
-  }
  
   function animate() {
     context.clearRect(0,0,canvas.width, canvas.height)

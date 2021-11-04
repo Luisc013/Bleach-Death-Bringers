@@ -1,5 +1,8 @@
+const introcontainer = document.querySelector('#intro-container');
+const titlemusic = document.querySelector('#title-music');
 var delayInMilliseconds = 2000;
-var delayInMilliseconds2 = 9000; //1 second
+var delayInMilliseconds2 = 9000;
+var titlecounter = 0;
 
 setTimeout(function() {
     startShowing();
@@ -8,6 +11,11 @@ setTimeout(function() {
     setTimeout(function() {
         startKeyShowing();
         }, delayInMilliseconds2);
+
+    setTimeout(function () {
+        introcontainer.click();
+        hideTitlescreen();        
+    }, 10000);
 
     function startKeyShowing(){
         var idToHide = document.getElementById("start-game");
@@ -35,3 +43,24 @@ function startShowing(){
     },250);
     }
 
+    
+    function hideTitlescreen(e) {
+        if(titlecounter >= 1){
+            console.log("Already exited from title screen!")
+            return 
+        }
+        introcontainer.addEventListener('keyup', hideTitlescreen);
+        if (e.keyCode === 32 || e.key === ' ') {
+            //your code
+            introcontainer.style.opacity = 1;
+            var intervalId = setInterval(function(){
+                if(introcontainer.style.opacity <= 0)
+                {
+                    clearInterval(intervalId);
+                }else{
+                    introcontainer.style.opacity = parseFloat(introcontainer.style.opacity) - 0.1;
+                }
+            },50);
+        }
+        titlecounter = titlecounter+1
+    }

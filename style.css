@@ -18,7 +18,8 @@
       width: 100%;
       min-height: 100vh;
   }
-          .showcase video {
+
+.showcase video {
       position: absolute;
       top: 0;
       left: 0;
@@ -37,12 +38,13 @@
   
 #title-icon h1 {
       text-align: center;
-      font-size: 7em;
+      font-size: 7.5em;
       color: #ED1C22;
       font-weight: 900;
       -webkit-text-stroke-width: 1px;
       -webkit-text-stroke-color:#009DE1;
   }
+
 .glow {
     font-size: 80px;
     color: rgb(153, 152, 152);
@@ -60,3 +62,29 @@
       text-shadow: 0 0 20px #fff, 0 0 30px #5F5F5F, 0 0 40px #5F5F5F, 0 0 50px #5F5F5F, 0 0 60px #5F5F5F, 0 0 70px #5F5F5F, 0 0 80px #5F5F5F;
     }
   }
+
+  #start-game {
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto;
+      bottom: 16%;
+      opacity: 0;
+  }
+  
+  #start-game h2 {
+    text-align: center;
+    color: #ED1C22;
+    font-size: 2.5em;
+    border: #fff;
+    text-decoration: underline;
+  }
+
+  .spacebar-icon {
+  position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 10%;
+    height: 7vh;
+}
